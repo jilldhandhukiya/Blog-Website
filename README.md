@@ -37,5 +37,5 @@ npm run dev
 
 ## Database
 
-Requires MongoDB 
+Requires MongoDB <br>
 Add Your MongoDb URI In `.env` file in server Folder(Optional in localhost)
