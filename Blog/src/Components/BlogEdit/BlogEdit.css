@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.askitall-name {
+    position: absolute;
+    top: 20px;
+    left: 450px;
+    z-index: 1;
+    pointer-events: none;
+    width: 230px; /* Increased width */
+    height: auto;
+}
+
+.askitall-logo {
+    position: absolute;
+    top: 20px;
+    left: 1020px;
+    z-index: 1;
+    pointer-events: none;
+    width: 250px;
+    height: auto;
+}
+
+.blog-edit-container {
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 0;
+    top: 70px; /* Adjusted top position */
+}
+
+.blog-edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em; /* Increased the font size */
+}
+
+.blog-edit-form {
+    margin-top: 20px; 
+    padding: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input {
+    width: 70%;
+    padding: 15px 20px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background-color: #FFE4E1;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1.2em;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff4b4b;
+    background-color: #fff;
+}
+
+.drop-area {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  margin: 2em;
+  margin-left: -2%;
+  margin-bottom: 15px;
+  border: 2px dashed #ff6347;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #fff8f5; /* Add background color */
+  transition: border-color 0.3s;
+}
+
+.drop-area:hover {
+  border-color: #ff4500; /* Change border color on hover */
+}
+
+.drop-area .file-upload-label {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ff6347; 
+}
+
+.drop-area .file-upload-label:hover {
+  color: #ff4500; 
+}
+
+.thumbnail-container {
+  position: relative;
+  display: inline-block;
+}
+
+.thumbnail {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.remove-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #fff;
+  border: none;
+  color: #f00;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.blog-editor {
+    min-height: 500px; /* Changed height to min-height */
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.preview-button {
+    background-color: #ff6347;
+    color: white;
+    margin-right: 10px;
+}
+
+.publish-button {
+    background-color: #ff4500;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.preview-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.preview-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    text-align: center; /* Center align text in preview */
+}
+
+.thumbnail-preview {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.tag-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.tag-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2em; /* Increased font size */
+}
+
+.radio-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-buttons label {
+    cursor: pointer;
+    font-size: 1.2em; /* Increased font size */
+}
+
+.radio-buttons input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Styles for the Quill editor container */
+.ql-container {
+  width: 100%;
+  max-width: 2000px; /* Increased max-width */
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 15px; /* Matching border radius */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+  background-color: #fff8f5; /* Add background color */
+}
+
+.ql-toolbar {
+  flex: none;
+  border-radius: 15px 15px 0 0; /* Matching border radius */
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.ql-editor {
+  flex: 1;
+  min-height: 400px; /* Increased min-height */
+  font-size: 18px; /* Increased font size */
+  border-radius: 0 0 15px 15px; /* Matching border radius */
+  box-sizing: border-box;
+  padding: 20px; /* Adding padding for better text visibility */
+  overflow: auto;
+}
+
+.thumbnail-preview {
+  max-width: 100%;
+  max-height: 300px; /* Ensuring the image doesn't exceed the main block container */
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
